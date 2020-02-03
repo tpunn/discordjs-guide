@@ -31,7 +31,7 @@ TOKEN=Whatever your client secret is
 Accessing dotenv values in Node.js is easy, and you just need to use `process.env.NAMEOFVALUE` or in this case... `process.env.TOKEN`
 
 In your `index.js` file, add the following starter code:
-```
+```js
 const Discord = require('discord.js') //Imports the discord.js library so you can use special features from Discord
 const client = new Discord.Client() //creates a new client for your program to run on
 const prefix = "!" //Defines the command prefix... `!hello` for example
