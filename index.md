@@ -56,4 +56,46 @@ client.login(process.env.TOKEN)
 
 This example goes over the essential components of a basic bot. In future examples, you will see more advanced examples and systems to make your bot cleaner and more complex.
 
-**More lessons will be added soon.**
+### Keeping your bot alive
+
+You might've noticed that the moment you signed off repl.it, the bot went offline. We wouldn't have chosen repl.it if it can't keep bots online 24/7. Here are some things you should know about what we will be doing:
+- Repl.it code can stay alive if a server is active
+- Servers go inactive after an hour, so pinging it is required
+
+To do this, we need to use two tools: a server framework (respective to the language, Express-Node.js, Flask-Python) and UptimeRobot. We will go over how to use these tools in this section.
+
+First, to create an active server, make a new file in your repl project named `server.js`
+
+```js
+const express = require('express');
+const server = express();
+
+server.all('/', (req, res) => res.send('Your bot is alive!'))
+
+const keepAlive = () => {
+    server.listen(3000, () => console.log("Server is Ready!"));
+}
+
+module.exports = keepAlive;
+```
+The above code will build a server with Express that can be pinged by UptimeRobot. Since this is in a separate file, and the run will only work with `index.js`, you need to require this file as a module, and get the `module.exports` as you can see on the bottom of the code to execute the function. Add the following lines to your `index.js`
+
+```js
+const keepAlive = require('./server');
+keepAlive();
+```
+
+Now, when you run the project, you should see a new tab pop up left to the code with a link in the address bar. Copy this link, and keep it somewhere to be used later on.
+
+Next, redirect yourself in a new tab to the [UptimeRobot Website](https://uptimerobot.com/).
+Create a new account, and once you find success, navigate to the dashboard.
+
+1. Add new monitor
+2. In the monitor type field, select "HTTP(s)"
+3. Give a friendly name regarding your bot
+4. In the URL/IP field, put in the link you copied earlier
+5. Since repl.it goes inactive every hour, 30 minutes would be an ideal interval
+6. If you want, select the checkbox for alerts which sends your email downtimes and such. 
+7. Once you did all the steps above, press on the blue "create monitor" button. If you didn't select an alert field, it will ask you once more with an orange button. Click anyways.
+
+Congratulations, your monitor is now ready! It will ping your bot's server every 30 minutes, keeping it online 24/7 except for a few short downtimes throughout. You officially have a working bot. Future lessons will be focused on refactoring bot code into an easier file based system that runs on modularization/enmapping, as well as adding more complex features into the mix like databases (through Firebase).
