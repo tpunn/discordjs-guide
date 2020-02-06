@@ -1,4 +1,4 @@
-# discordjs-guide
+# Discord Bots Fundamentals
 **Learn to make Discord bots with JavaScript and/or Python**
 
 ## Questions?
