@@ -101,3 +101,5 @@ Create a new account, and once you find success, navigate to the dashboard.
 7. Once you did all the steps above, press on the blue "create monitor" button. If you didn't select an alert field, it will ask you once more with an orange button. Click anyways.
 
 Congratulations, your monitor is now ready! It will ping your bot's server every 30 minutes, keeping it online 24/7 except for a few short downtimes throughout. You officially have a working bot. Future lessons will be focused on refactoring bot code into an easier file based system that runs on modularization/enmapping, as well as adding more complex features into the mix like databases (through Firebase).
+
+**Having trouble getting the bot to work?** Compare your code to mines: https://repl.it/@tpunn19/ExampleDjsBot. If you have any questions, don't hesitate to comment in my Github Repository for this tutorial (link to repo at the top of page).
