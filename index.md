@@ -6,6 +6,8 @@ The easiest way to get a bot up running is on an online programming environment 
 
 Now that you have your coding environment set up, we need to create the bot on Discord's end before we can program it. Keep this tab aside and navigate to the [Discord Developer Dashboard](https://discordapp.com/developers/applications/).
 
+*Why repl.it?* To make a functioning Discord bot, you need to pay for 24/7 hosting services. Repl.it, along with other third-party services, allows us to easily and reliably host our bot (and provide an IDE to work on it) for free. A major downside though is not being able to work with voice channels, therefore you can't make a music bot at least in my knowledge. There might be a hacky way to get this done, but the right way is not supported unfortunately. Otherwise, repl.it is ideal for getting your first bots and command-dominant bots online.
+
 ### Creating a bot account
 
 1. Create a "new application" with the large blue button at the top right near your avatar.
