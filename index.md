@@ -2,13 +2,15 @@
 This tutorial is designed to help people with minimal programming experience to learn how to program Discord bots with JavaScript. Python tutorials will be added soon as well for those interested in the Python language.
 
 ### IDE
-The easiest way to get a bot up running is on an online programming environment called [repl.it](https://repl.it/). Create an account, and make a **new repl** with the language NodeJS (JavaScript for the server). An IDE is an integrated development environment, basically where you code and develop your application.
+The easiest way to get a bot up running is on an online programming environment called [repl.it](https://repl.it/). 
 
-Now that you have your coding environment set up, we need to create the bot on Discord's end before we can program it. Keep this tab aside and navigate to the [Discord Developer Dashboard](https://discordapp.com/developers/applications/).
+Create an account, and make a **new repl** with the language NodeJS (JavaScript for the server). An IDE is an integrated development environment, basically where you code and develop your application.
 
 *Why repl.it?* To make a functioning Discord bot, you need to pay for 24/7 hosting services. Repl.it, along with other third-party services, allows us to easily and reliably host our bot (and provide an IDE to work on it) for free. A major downside though is not being able to work with voice channels, therefore you can't make a music bot at least in my knowledge. There might be a hacky way to get this done, but the right way is not supported unfortunately. Otherwise, repl.it is ideal for getting your first bots and command-dominant bots online.
 
 ### Creating a bot account
+
+Now that you have your coding environment set up, we need to create the bot on Discord's end before we can program it. Keep this tab aside and navigate to the [Discord Developer Dashboard](https://discordapp.com/developers/applications/).
 
 1. Create a "new application" with the large blue button at the top right near your avatar.
 2. Fill in the name field and create your app. On the left menu, navigate to "Bot"
